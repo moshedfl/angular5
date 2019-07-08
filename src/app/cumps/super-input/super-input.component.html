@@ -1,5 +1,6 @@
-<app-super-input2 [super]= "startValue"></app-super-input2>
 
-<h3>from child</h3>
-{{startValue}}
+<h3>האבא</h3>
+<input [value] = "startValue" (input) = "startValue = $event.target.value">
+<h3>הבן</h3>
+<app-super-input2 [super]= "startValue" (revers) = "startValue = $event"></app-super-input2>
 

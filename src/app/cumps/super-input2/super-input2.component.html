@@ -1,6 +1,7 @@
 <input 
-    [value] = "myValue">
+    [value] = "start"
+    (input) = "revers.emit($event.target.value)"
+    >
 
 <br><br>
 
-{{start}}

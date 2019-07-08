@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-super-input2',
@@ -8,13 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SuperInput2Component implements OnInit {
 
 @Input('super') start:string;
-  myValue:string = "also no value"
-  userValue:string = "user no value"
+@Output()revers:EventEmitter<string> = new EventEmitter<string>()
+  
   constructor() { }
 
   ngOnInit() {
-    setTimeout(()=> this.myValue="also new value",2000)
-    setTimeout(()=> this.userValue = "user new valve", 2000)
+    
   }
 
 }
